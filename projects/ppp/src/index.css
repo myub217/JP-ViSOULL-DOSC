@@ -1,0 +1,125 @@
+/* ✅ index.css — Tailwind + DaisyUI Styling Layer for JP VISUAL & DOCS */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === 🌐 GLOBAL BASE STYLES === */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-base-100 text-base-content font-inter;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-content;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-base-content;
+  }
+
+  button {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply bg-base-100 border border-base-300 rounded-lg px-4 py-2 text-base-content placeholder-base-content/60 focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+}
+
+/* === 🧱 COMPONENT UTILITIES — JP Namespace === */
+@layer components {
+  /* ✅ Buttons */
+  .btn-jp-primary {
+    @apply btn bg-primary text-white px-6 py-2 rounded-xl font-semibold shadow-md hover:bg-primary/90 transition;
+  }
+
+  .btn-jp-outline {
+    @apply btn border border-primary text-primary hover:bg-primary hover:text-white px-6 py-2 rounded-xl transition;
+  }
+
+  .btn-jp-secondary {
+    @apply btn bg-secondary text-white px-6 py-2 rounded-xl font-medium hover:bg-secondary/90 transition;
+  }
+
+  /* ✅ Cards & Containers */
+  .card-jp-glass {
+    @apply bg-base-100/70 backdrop-blur-lg shadow-xl border border-base-300 rounded-2xl;
+  }
+
+  .glass-jp-sm {
+    @apply bg-base-100/40 backdrop-blur-sm border border-base-200 rounded-lg p-4 shadow-md;
+  }
+
+  /* ✅ Typography */
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-6 md:mb-10 text-base-content;
+  }
+
+  .text-jp-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text;
+  }
+
+  /* ✅ Tags & Badges */
+  .badge-jp-tag {
+    @apply inline-block px-3 py-1 text-sm rounded-full bg-secondary text-white;
+  }
+
+  /* ✅ Forms */
+  .input-jp-field {
+    @apply w-full px-4 py-2 border border-base-300 rounded-lg bg-base-100 text-base-content placeholder-base-content/60 focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+
+  .form-jp-label {
+    @apply block mb-1 text-sm font-medium text-base-content;
+  }
+
+  .form-jp-error {
+    @apply mt-1 text-sm text-error;
+  }
+}
+
+/* === 📱 RESPONSIVE LAYOUT UTILITIES === */
+@layer utilities {
+  .container {
+    @apply w-full px-4 mx-auto max-w-7xl;
+  }
+
+  .section-spacing {
+    @apply py-12 md:py-20;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .debug {
+    outline: 1px solid red;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,0 +1,60 @@
+// ✅ src/Home/common/DisclaimerModal.tsx — Legal Notice Popup (JP Visual & Docs)
+
+"use client";
+
+import { useEffect, useState } from "react";
+import { Dialog } from "@headlessui/react";
+
+/**
+ * ✅ DisclaimerModal
+ * - แสดงแจ้งเตือนทางกฎหมายเฉพาะครั้งแรก
+ * - บันทึกสถานะการอ่านลง localStorage ('seen_disclaimer')
+ * - ปลอดภัย, รองรับ accessibility, responsive
+ */
+const DisclaimerModal = () => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const seen = localStorage.getItem("seen_disclaimer");
+    if (!seen) setOpen(true);
+  }, []);
+
+  const handleClose = () => {
+    localStorage.setItem("seen_disclaimer", "true");
+    setOpen(false);
+  };
+
+  return (
+    <Dialog open={open} onClose={handleClose} className="relative z-50">
+      {/* ✅ Overlay */}
+      <div
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+        aria-hidden="true"
+      />
+
+      {/* ✅ Centered Modal */}
+      <div className="fixed inset-0 flex items-center justify-center p-4">
+        <Dialog.Panel className="w-full max-w-sm rounded-xl bg-white p-6 text-gray-800 shadow-xl">
+          <Dialog.Title className="text-lg font-bold mb-2">
+            ⚠️ แจ้งเพื่อทราบ
+          </Dialog.Title>
+
+          <Dialog.Description className="text-sm mb-4 leading-relaxed">
+            เว็บไซต์นี้ไม่ใช่สถาบันการเงิน และไม่มีบริการปล่อยสินเชื่อในทุกกรณี
+            <br />
+            ทีม JP Visual & Docs ให้บริการเฉพาะด้านงานเอกสารและระบบเท่านั้น
+          </Dialog.Description>
+
+          <button
+            onClick={handleClose}
+            className="mt-2 w-full rounded-lg bg-primary px-4 py-2 text-white font-semibold hover:bg-primary/90 transition"
+          >
+            รับทราบแล้ว
+          </button>
+        </Dialog.Panel>
+      </div>
+    </Dialog>
+  );
+};
+
+export default DisclaimerModal;

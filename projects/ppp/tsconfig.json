@@ -1,0 +1,57 @@
+// tsconfig.json — ✅ Production-Ready Configuration for JPVisualDocs
+
+{
+  "compilerOptions": {
+    // ✅ Modern JavaScript target
+    "target": "ESNext",
+    "module": "ESNext",
+
+    // ✅ Enable stricter class field behavior
+    "useDefineForClassFields": true,
+
+    // ✅ Module resolution for Node
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+
+    // ✅ Modern browser & TS libs
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    // ✅ JavaScript strict mode
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+
+    // ✅ JSX config for React 17+
+    "jsx": "react-jsx",
+
+    // ✅ Compatibility flags
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "noEmit": true,
+
+    // ✅ Project-relative import aliases
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@admin/*": ["Admin/*"],
+      "@assets/*": ["assets/*"],
+      "@common/*": ["Home/common/*"],
+      "@components/*": ["Home/components/*"],
+      "@formui/*": ["Home/components/Forms/ui/*"],
+      "@forms/*": ["Home/components/Forms/*"],
+      "@hooks/*": ["hooks/*"],
+      "@layout/*": ["Layout/*"],
+      "@lib/*": ["lib/*"],
+      "@router/*": ["Router/*"],
+      "@server/*": ["server/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"],
+      "@data/*": ["data/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", ".turbo", ".next"]
+}
