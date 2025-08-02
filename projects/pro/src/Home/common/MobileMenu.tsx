@@ -80,7 +80,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             >
               {label}
             </a>
-          )
+          ),
         )}
 
         {/* ✅ CTA */}

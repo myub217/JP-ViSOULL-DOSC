@@ -40,10 +40,7 @@ const HeroBackground = ({ className = "" }: HeroBackgroundProps) => (
     {/* 🖼️ Hero Background Image (WebP + JPEG fallback) */}
     <div className="absolute inset-0 z-0 opacity-10">
       <picture>
-        <source
-          srcSet="/assets/images/hero/hero-bg.webp"
-          type="image/webp"
-        />
+        <source srcSet="/assets/images/hero/hero-bg.webp" type="image/webp" />
         <img
           src="/assets/images/hero/hero-bg.jpg"
           alt=""

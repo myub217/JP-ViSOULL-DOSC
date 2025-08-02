@@ -1,6 +1,6 @@
 // src/utils/hashPassword.ts
 
-import bcrypt from 'bcryptjs'
+import bcrypt from "bcryptjs";
 
 /**
  * ✅ comparePassword
@@ -12,21 +12,21 @@ import bcrypt from 'bcryptjs'
  */
 export const comparePassword = async (
   plainPassword: string,
-  hashedPassword: string
+  hashedPassword: string,
 ): Promise<boolean> => {
   try {
-    return await bcrypt.compare(plainPassword, hashedPassword)
+    return await bcrypt.compare(plainPassword, hashedPassword);
   } catch (error) {
-    console.error('[comparePassword Error]', error)
-    return false
+    console.error("[comparePassword Error]", error);
+    return false;
   }
-}
+};
 
 /**
  * ✅ hashPassword
  * ใช้สำหรับกรณีสร้าง hash สำหรับ admin เท่านั้น ไม่ควรใช้ฝั่ง client
  */
 export const hashPassword = async (password: string): Promise<string> => {
-  const saltRounds = 10
-  return await bcrypt.hash(password, saltRounds)
-}
+  const saltRounds = 10;
+  return await bcrypt.hash(password, saltRounds);
+};

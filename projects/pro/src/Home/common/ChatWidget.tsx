@@ -16,7 +16,11 @@ const ChatWidget = () => {
         aria-label="เปิดปิดแชท"
         className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-secondary text-white shadow-lg hover:bg-secondary/90 transition"
       >
-        {open ? <X className="w-5 h-5" /> : <MessageCircle className="w-5 h-5" />}
+        {open ? (
+          <X className="w-5 h-5" />
+        ) : (
+          <MessageCircle className="w-5 h-5" />
+        )}
       </button>
 
       {/* ✅ Chat Panel (เชื่อมต่อภายนอก LINE OA หรือ Messenger) */}

@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
                   "btn btn-sm btn-ghost px-4 rounded-md transition-colors",
                   currentPath === path
                     ? "text-primary font-semibold bg-base-200 dark:bg-base-300"
-                    : "text-gray-700 dark:text-gray-300 hover:text-primary"
+                    : "text-gray-700 dark:text-gray-300 hover:text-primary",
                 )}
                 aria-current={currentPath === path ? "page" : undefined}
               >

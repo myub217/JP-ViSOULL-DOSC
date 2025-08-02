@@ -13,7 +13,9 @@ const ThemeToggle: React.FC = () => {
       document.documentElement.classList.toggle("dark", savedTheme === "dark");
     } else {
       // ถ้าไม่มี theme ใน localStorage ให้ดู system preference
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
       setTheme(prefersDark ? "dark" : "light");
       document.documentElement.classList.toggle("dark", prefersDark);
     }

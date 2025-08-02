@@ -24,7 +24,12 @@
     @apply transition-colors duration-200 underline-offset-4 hover:text-primary;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold text-base-content;
   }
 

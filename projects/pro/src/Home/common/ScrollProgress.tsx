@@ -13,9 +13,11 @@ const ScrollProgress: React.FC = () => {
 
   useEffect(() => {
     const updateScrollProgress = () => {
-      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+      const { scrollTop, scrollHeight, clientHeight } =
+        document.documentElement;
       const totalScrollable = scrollHeight - clientHeight;
-      const progress = totalScrollable > 0 ? (scrollTop / totalScrollable) * 100 : 0;
+      const progress =
+        totalScrollable > 0 ? (scrollTop / totalScrollable) * 100 : 0;
       setScroll(progress);
     };
 

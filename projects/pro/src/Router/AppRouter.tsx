@@ -1,17 +1,17 @@
 // src/Router/AppRouter.tsx
 
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-import Layout from '@/Layout/Layout';
-import Home from '@/Home/Home';
-import Login from '@/Home/Login';
-import Secret from '@/Home/Secret';
-import CustomerAssessmentForm from '@/Home/CustomerAssessmentForm';
+import Layout from "@/Layout/Layout";
+import Home from "@/Home/Home";
+import Login from "@/Home/Login";
+import Secret from "@/Home/Secret";
+import CustomerAssessmentForm from "@/Home/CustomerAssessmentForm";
 
-import NotFound from '@/Home/common/404';
-import GuardRoutes from '@/Router/GuardRoutes';
-import RoleGuard from '@/Router/RoleGuard';
+import NotFound from "@/Home/common/404";
+import GuardRoutes from "@/Router/GuardRoutes";
+import RoleGuard from "@/Router/RoleGuard";
 
 /**
  * ✅ AppRouter - กำหนดเส้นทาง (routes) ทั้งหมดของแอป
@@ -45,12 +45,15 @@ const AppRouter: React.FC = () => {
       <Route
         path="admin"
         element={
-          <RoleGuard allowedRoles={['admin']}>
+          <RoleGuard allowedRoles={["admin"]}>
             <Layout />
           </RoleGuard>
         }
       >
-        <Route index element={<div className="p-4 text-xl">Admin Dashboard</div>} />
+        <Route
+          index
+          element={<div className="p-4 text-xl">Admin Dashboard</div>}
+        />
       </Route>
 
       {/* Catch-All 404 */}
