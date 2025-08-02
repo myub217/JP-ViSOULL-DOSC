@@ -6,7 +6,6 @@ const config: Config = {
 
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 
-  // ✅ Safelist สำหรับ class ที่อาจถูกใช้งานแบบ dynamic
   safelist: [
     'bg-primary',
     'text-accent',
@@ -38,7 +37,6 @@ const config: Config = {
     },
 
     extend: {
-      // ✅ Custom Breakpoints (ซ้ำ container เพื่อรองรับ @screen)
       screens: {
         xs: '475px',
         sm: '640px',
@@ -48,11 +46,10 @@ const config: Config = {
         '2xl': '1536px',
       },
 
-      // ✅ Brand Colors (JP Identity)
       colors: {
-        primary: '#3B82F6',   // Blue
-        secondary: '#64748B', // Slate
-        accent: '#22C55E',    // Green
+        primary: '#3B82F6',
+        secondary: '#64748B',
+        accent: '#22C55E',
         neutral: '#3D4451',
         black: '#000000',
         white: '#ffffff',
@@ -61,18 +58,15 @@ const config: Config = {
         current: 'currentColor',
       },
 
-      // ✅ Fonts
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
 
-      // ✅ Custom Background Image
       backgroundImage: {
         'hero-pattern': "url('/assets/hero.webp')",
       },
 
-      // ✅ Custom Animations
       animation: {
         fadeInUp: 'fadeInUp 0.5s ease-out both',
         fadeIn: 'fadeIn 0.3s ease-out both',
@@ -95,7 +89,6 @@ const config: Config = {
         },
       },
 
-      // ✅ SVG Fill Colors
       fill: theme => ({
         primary: theme('colors.primary'),
         secondary: theme('colors.secondary'),
@@ -103,7 +96,6 @@ const config: Config = {
     },
   },
 
-  // ✅ DaisyUI Config
   plugins: [daisyui],
 
   daisyui: {

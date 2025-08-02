@@ -1,10 +1,8 @@
-/* ✅ index.css — Tailwind + DaisyUI Styling Layer for JP VISUAL & DOCS */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* === 🌐 GLOBAL BASE STYLES === */
+/* 🌐 GLOBAL BASE STYLES */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -40,11 +38,18 @@
   input,
   textarea,
   select {
-    @apply bg-base-100 border border-base-300 rounded-lg px-4 py-2 text-base-content placeholder-base-content/60 focus:outline-none focus:ring-2 focus:ring-primary;
+    @apply bg-base-100 border border-base-300 rounded-lg px-4 py-2 text-base-content focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    @apply text-base-content;
+    opacity: 0.6;
   }
 }
 
-/* === 🧱 COMPONENT UTILITIES — JP Namespace === */
+/* 🧱 JP COMPONENTS */
 @layer components {
   /* ✅ Buttons */
   .btn-jp-primary {
@@ -59,7 +64,7 @@
     @apply btn bg-secondary text-white px-6 py-2 rounded-xl font-medium hover:bg-secondary/90 transition;
   }
 
-  /* ✅ Cards & Containers */
+  /* ✅ Cards / Glass */
   .card-jp-glass {
     @apply bg-base-100/70 backdrop-blur-lg shadow-xl border border-base-300 rounded-2xl;
   }
@@ -77,14 +82,19 @@
     @apply bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text;
   }
 
-  /* ✅ Tags & Badges */
+  /* ✅ Tags / Badges */
   .badge-jp-tag {
     @apply inline-block px-3 py-1 text-sm rounded-full bg-secondary text-white;
   }
 
-  /* ✅ Forms */
+  /* ✅ Form Controls */
   .input-jp-field {
-    @apply w-full px-4 py-2 border border-base-300 rounded-lg bg-base-100 text-base-content placeholder-base-content/60 focus:outline-none focus:ring-2 focus:ring-primary;
+    @apply w-full px-4 py-2 border border-base-300 rounded-lg bg-base-100 text-base-content focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+
+  .input-jp-field::placeholder {
+    @apply text-base-content;
+    opacity: 0.6;
   }
 
   .form-jp-label {
@@ -96,7 +106,7 @@
   }
 }
 
-/* === 📱 RESPONSIVE LAYOUT UTILITIES === */
+/* 📱 LAYOUT / UTILITIES */
 @layer utilities {
   .container {
     @apply w-full px-4 mx-auto max-w-7xl;
