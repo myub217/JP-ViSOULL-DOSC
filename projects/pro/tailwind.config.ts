@@ -3,12 +3,10 @@ import daisyui from 'daisyui';
 
 const config: Config = {
   darkMode: 'class',
-
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
   ],
-
   safelist: [
     'bg-primary',
     'text-accent',
@@ -18,7 +16,6 @@ const config: Config = {
       pattern: /^bg-(red|green|blue|slate)-(100|500)$/,
     },
   ],
-
   theme: {
     container: {
       center: true,
@@ -38,7 +35,6 @@ const config: Config = {
         '2xl': '1536px',
       },
     },
-
     extend: {
       colors: {
         primary: '#3B82F6',
@@ -51,22 +47,18 @@ const config: Config = {
         inherit: 'inherit',
         current: 'currentColor',
       },
-
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
-
       backgroundImage: {
         'hero-pattern': "url('/assets/hero.webp')",
       },
-
       animation: {
         fadeInUp: 'fadeInUp 0.5s ease-out both',
         fadeIn: 'fadeIn 0.3s ease-out both',
         bounceIn: 'bounceIn 0.6s ease-out both',
       },
-
       keyframes: {
         fadeInUp: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
@@ -82,16 +74,13 @@ const config: Config = {
           '100%': { transform: 'scale(1)' },
         },
       },
-
       fill: theme => ({
         primary: theme('colors.primary'),
         secondary: theme('colors.secondary'),
       }),
     },
   },
-
   plugins: [daisyui],
-
   daisyui: {
     themes: [
       {

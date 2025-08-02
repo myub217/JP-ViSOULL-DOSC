@@ -5,14 +5,14 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* ✅ ใช้กับ bundler เช่น Vite */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
 
-    /* Linting */
+    /* ✅ ตรวจสอบความสะอาดของโค้ด */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,

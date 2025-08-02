@@ -1,4 +1,6 @@
 {
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dev-dist",
   "rewrites": [
     {
       "source": "/(.*)",
