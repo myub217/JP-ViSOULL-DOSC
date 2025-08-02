@@ -1,0 +1,23 @@
+// tsconfig.paths.json — ✅ Path Aliases สำหรับ TypeScript (ใช้งานร่วมกับ Vite)
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@admin/*": ["Admin/*"],
+      "@assets/*": ["assets/*"],
+      "@common/*": ["Home/common/*"],
+      "@components/*": ["Home/components/*"],
+      "@formui/*": ["Home/components/Forms/ui/*"],
+      "@forms/*": ["Home/components/Forms/*"],
+      "@hooks/*": ["hooks/*"],
+      "@layout/*": ["Layout/*"],
+      "@lib/*": ["lib/*"],
+      "@router/*": ["Router/*"],
+      "@server/*": ["server/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"],
+      "@data/*": ["data/*"]
+    }
+  }
+}
