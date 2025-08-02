@@ -1,0 +1,103 @@
+## ========================================
+# ✅ JPVisualDocs — .gitignore (Production-grade)
+# ========================================
+
+# ───── Logs ─────
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ───── Dependency Directories ─────
+node_modules/
+
+# ───── Build Artifacts ─────
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.vercel/
+.netlify/
+
+# ───── Environment Files ─────
+.env
+.env.*
+.env.*.local
+*.local
+
+# ───── IDE & Editor Configs ─────
+.vscode/
+!.vscode/extensions.json  # Allow team-shared extensions
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ───── OS & Editor Caches ─────
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ───── TypeScript ─────
+*.tsbuildinfo
+
+# ───── Lint / Format ─────
+.husky/_/
+.husky/pre-commit
+lint-staged.config.*
+.prettier*
+.eslintcache
+.stylelintcache
+
+# ───── macOS ─────
+__MACOSX/
+
+# ───── Testing & Coverage ─────
+coverage/
+*.lcov
+*.lcov.*
+
+# ───── Tooling & Monorepo ─────
+.turbo/
+.cache/
+.pnpm-debug.log
+
+# ───── PWA Artifacts ─────
+*.webmanifest
+workbox-*.js
+injectManifest-sw.js
+service-worker.js
+sw.js
+
+# ───── Backup & Snapshots ─────
+.backup/
+*.bak
+*.tmp
+*.old
+*.orig
+
+# ───── VSCode Workspace (Optional) ─────
+*.code-workspace
+
+# ───── Design / Assets (JPVisualDocs-specific) ─────
+src/assets/**/*.webp
+src/assets/**/*.psd
+src/assets/**/*.ai
+src/assets/**/*.xd
+src/assets/**/*.sketch
+src/assets/services/drafts/
+
+# ───── System Generated ─────
+ehthumbs.db
+Icon?
+._*
+
+# ========================================
+# ✅ END: JPVisualDocs — .gitignore
+# ========================================
