@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Pro App</title>
+
+    <!-- ✅ Meta SEO เบื้องต้น -->
+    <meta name="description" content="Pro App — Built with React, TailwindCSS, DaisyUI" />
+    <meta name="theme-color" content="#3B82F6" />
+
+    <!-- ✅ Font Inter (CDN fallback) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
-  <body class="bg-base-100 text-base-content font-inter">
+
+  <body class="bg-base-100 text-base-content font-inter antialiased">
     <div id="root"></div>
+
+    <!-- ✅ Entry Point -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

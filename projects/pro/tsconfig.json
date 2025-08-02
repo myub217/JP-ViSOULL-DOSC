@@ -1,25 +1,48 @@
 {
   "compilerOptions": {
+    /* ✅ Target JavaScript version */
     "target": "ESNext",
+
+    /* ✅ ใช้ define property กับ class field (React 19+) */
     "useDefineForClassFields": true,
+
+    /* ✅ Environment libraries เช่น DOM, ESNext */
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+
+    /* ✅ Module system */
     "module": "ESNext",
     "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+
+    /* ✅ JSX runtime แบบใหม่ของ React */
     "jsx": "react-jsx",
+
+    /* ✅ Base alias สำหรับ import */
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+
+    /* ✅ ปรับคุณภาพ code */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* ✅ ไม่ให้ compile ไฟล์ JS */
+    "allowJs": false,
+    "noEmit": true,
+
+    /* ✅ ข้ามการตรวจสอบ lib externals เช่น node_modules */
+    "skipLibCheck": true
   },
-  "include": ["src", "vite.config.ts"],
-  "exclude": ["node_modules", "dev-dist"]
+  "include": [
+    "src",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dev-dist"
+  ]
 }

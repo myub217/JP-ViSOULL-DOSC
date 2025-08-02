@@ -1,30 +1,29 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import path from 'path';
 
-// ✅ Vite Config สำหรับ React + Tailwind + Alias + Termux dev environment
+// ✅ Vite Config สำหรับ React + TailwindCSS + TypeScript + Termux + Vercel
 export default defineConfig({
   plugins: [
-    react(),
-    tsconfigPaths(), // อ่าน alias จาก tsconfig.json
+    react(),             // รองรับ JSX/TSX + Fast Refresh
+    tsconfigPaths(),     // ดึง alias จาก tsconfig.json
   ],
   resolve: {
     alias: {
-      // ✅ กำหนด alias สำรอง ให้ @ ชี้ไปที่ src
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, 'src'), // ✅ ใช้ @ แทน path ไปยัง src
     },
   },
   css: {
-    postcss: './postcss.config.cjs', // ✅ ใช้ PostCSS config ของ TailwindCSS
+    postcss: path.resolve(__dirname, 'postcss.config.cjs'), // ✅ ใช้ config PostCSS/Tailwind แบบชัดเจน
   },
   server: {
-    host: '0.0.0.0', // ✅ รองรับการเข้าจาก Android/Termux device
+    host: '0.0.0.0',     // ✅ รองรับการเข้าจากมือถือ/Termux ในวง LAN
     port: 5173,
-    strictPort: true, // ถ้า port 5173 ไม่ว่างจะไม่เปลี่ยน port อัตโนมัติ
+    strictPort: true,    // ไม่เปลี่ยน port อัตโนมัติ หาก 5173 ถูกใช้งาน
   },
   build: {
-    outDir: 'dev-dist', // ✅ ไฟล์ build จะถูกเก็บที่โฟลเดอร์นี้
-    sourcemap: true,    // เปิด sourcemap เพื่อช่วย debug
+    outDir: 'dev-dist',  // ✅ โฟลเดอร์ปลายทางของ production build
+    sourcemap: true,     // ✅ เปิด sourcemap เพื่อ Debug production build
   },
 });
