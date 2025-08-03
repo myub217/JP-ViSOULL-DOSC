@@ -1,0 +1,60 @@
+{
+  "name": "pro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "author": "myub25217@gmail.com",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dev-dist .vite node_modules/.vite",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,md,json}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "backend": "ts-node server.ts",
+    "backup": "ts-node scripts/Backup.ts",
+    "check-structure": "ts-node scripts/CheckStructure.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@vercel/speed-insights": "^1.2.0",
+    "bcryptjs": "^3.0.2",
+    "clsx": "^2.1.1",
+    "express": "^4.18.2",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.536.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.62.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.7.1",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^24.1.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^5.0.50",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "fast-glob": "^3.3.1",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.0.6",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
